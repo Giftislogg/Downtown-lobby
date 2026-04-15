@@ -1,0 +1,144 @@
+The building  structure of DL app
+Create a complete full-stack hybrid mobile application called:
+Downtown Lobby Beta Version: 0.2
+Package Name: com.downtownlobby.khs
+By: Main Studios
+The system must be built in two phases:
+Backend + Admin Panel (FIRST)
+Frontend Hybrid Android App (SECOND)
+🧠 CORE CONCEPT
+Downtown Lobby is a modern school digital platform where students can access announcements, events, news, timetables, and entertainment content — all dynamically controlled from a web-based admin panel.
+All content must come from the backend. Nothing should be hardcoded in the app.
+🔧 PHASE 1: BACKEND + ADMIN PANEL
+Backend Requirements
+Build a custom backend using:
+Node.js (Express.js recommended) OR
+Supabase-style backend (auto-managed DB + storage)
+Core Features:
+📊 Database Collections:
+Announcements
+Events
+News & Posts
+Timetable (image-based)
+Videos (Entertainment)
+App Version Control
+📁 Storage System:
+Upload images (posts, timetable)
+Upload videos (for streaming)
+Store PDFs (optional support)
+♻️ Smart Cleanup System (IMPORTANT):
+When admin deletes:
+A post → delete its image from storage
+A video → remove file completely
+A timetable → replace old file
+This prevents storage overflow and keeps backend optimized.
+⚡ API System:
+Create REST API endpoints:
+GET /announcements
+GET /events
+GET /posts
+GET /videos
+GET /timetable
+GET /app-version
+All data must be dynamically fetched by the app.
+🖥️ Admin Panel (Web Dashboard)
+Create a modern admin dashboard with login authentication.
+Admin must be able to:
+📢 Create/Edit/Delete Announcements
+📅 Manage Events
+📰 Manage News & Posts
+🖼 Upload & Replace Timetable (Weekly + Exam)
+🎬 Upload/Delete Videos
+📄 Upload PDFs (optional)
+🚀 Update App Version + APK Download Link
+🔔 Remote Update System (IMPORTANT)
+Admin panel must include:
+Version number input (e.g. 0.2 → 0.3)
+APK download link field
+Backend stores:
+latest_version
+update_message
+download_url
+📱 PHASE 2: FRONTEND (HYBRID ANDROID APP)
+Tech Stack:
+React
+Capacitor (Android)
+🏠 Home Screen:
+Welcome card: “Hello Student!!”
+Clean card layout:
+Events
+News & Posts
+Timetable
+📢 Announcements:
+Display latest announcements
+Auto-update from backend
+📅 Events:
+Show upcoming events
+📰 News & Posts:
+Feed-style UI
+Supports images + text
+🕒 Timetable:
+Large, beautiful image display
+Auto-load from backend
+Supports:
+Weekly timetable
+Exam timetable
+⭐ Entertainment Section:
+Center star button opens this section
+Built-in video player
+Stream videos smoothly from backend
+Support multiple videos (scroll or list)
+🎬 Video System Requirements:
+Smooth playback
+Load videos dynamically
+Optimized for mobile performance
+🔔 App Update Popup System:
+When app opens:
+Fetch backend version
+Compare with current version (0.2)
+If outdated:
+Show popup: “New version available”
+Button → Download APK (from admin link)
+📱 Navigation:
+Bottom navigation bar:
+Home
+⭐ Entertainment (center)
+Studies
+⚙️ HYBRID BUILD SYSTEM
+Use:
+Node.js & pnpm
+Java (OpenJDK 21)
+Gradle 8.8
+Android SDK (Target 35)
+Capacitor bridge
+Build Process:
+pnpm build → generate /dist
+npx cap sync → move files to Android
+./gradlew assembleDebug → build APK
+Concept Explanation:
+Hybrid App = Android frame
+Web App = UI inside
+Capacitor = bridge
+Bundle assets:
+HTML, CSS, JS stored inside APK
+Faster load, partial offline support
+🎨 DESIGN
+Clean, modern UI
+Black + white + gold accent
+Smooth animations
+Rounded cards
+Premium feel
+🚀 FINAL OUTPUT
+Generate:
+Full backend (Node.js or equivalent)
+Admin panel (web)
+React frontend
+Capacitor Android project
+APK build setup
+⚠️ RULES
+No hardcoded content
+Backend controls everything
+Clean, scalable code
+Beginner-friendly but production-level
+store the final apk to a folder called beta app
+End of instructions.
